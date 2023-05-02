@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './Modal.module.css';
 import { createPortal } from 'react-dom';
 
@@ -12,4 +13,10 @@ export const Modal = ({ src, alt, onClick }) => {
     </div>,
     modalRoot
   );
+};
+
+modalRoot.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
